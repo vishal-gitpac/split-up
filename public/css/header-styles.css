@@ -86,7 +86,7 @@ header{
     border-radius: 5px;
     padding: 5px 20px 5px 20px;
     border: none;
-    box-shadow: 1px 1px 5px gray;
+
 }
 .button-sign-up:hover{
     background-color: rgba(255, 21, 0, 0.801);
