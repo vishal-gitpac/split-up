@@ -1,0 +1,44 @@
+.section-2,.section-3{
+    height: 100vh;
+}
+
+.section-2-h2{
+    text-align: center;
+    margin-top: 20vh;
+    font-weight: bolder;
+    
+}
+.section-3-h2{
+    text-align: center;
+    margin-top: 10vh;
+    font-weight: bolder;
+}
+.flexbox-container{
+    
+    display: flex;
+    
+    justify-content: space-between;
+}
+.flexbox-container-sec3{
+    display: flex;
+    
+    justify-content: space-around;
+}
+.flexbox-container > div,.flexbox-container-sec3 > div{
+    flex-basis: 32%;
+    margin-top: 20vh;
+    padding: 50px;
+    text-align: center;
+
+}
+.finance,.carbon{
+    width: 250px;
+    height: 250px;
+}
+.what{
+    width: 250px;
+    height: 250px;
+    padding-bottom: 50px;
+    
+}
+
