@@ -41,7 +41,7 @@ a{
     
     width: 100%;
     /*one html page=700px header=80px*/
-    height: 695px;
+    height: 100vh;
     padding-top: 80px;
     padding-left: 75px;
     background: linear-gradient( 270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../img/bg.jpg');
