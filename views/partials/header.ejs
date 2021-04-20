@@ -1,91 +1,120 @@
+@font-face {
+    font-family: 'quote-font';
+    src : url(../fonts/SpecialElite-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'AquireBold';
+    src : url(../fonts/AquireBold-8Ma60.otf)  ; 
+}
+@font-face {
+    font-family: 'Gilroy';
+    src : url(../fonts/Gilroy-Light.otf)  ; 
+}
+*{
+    font-family: Gilroy;
+}
+a{
+    cursor: pointer;
+    outline: none;
+}
+#logo-name{
+    font-family: 'AquireBold';
+    font-size: xx-large;
+    color: rgb(245, 245, 245);
+}
+#logo-name:hover{
+    outline: none;
+    outline-offset: none;
+    text-decoration: none;
+}
 
-<html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <link rel="stylesheet" href="/css/header-styles.css"/>
-      
-      <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+header{
+    /*border-bottom: 2px solid black;*/
+    block-size: 150%;
+    display: block;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(12, 12, 12);
+}
 
-    <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-        document.getElementById("mySidenav").style.width = "0px";
-        }
-    window.onclick=function()
-    {
-      var hidesidenav=document.getElementById('mySidenav');
-      var hidesidenavbtn=document.getElementById('sidenav-btn');
-      window.onclick = function(event) {
-        if (event.target != hidesidenav && event.target != hidesidenavbtn){
-            hidesidenav.style.width = "0px";
-        }
-      }
-    }
-        
-      </script>
-<header>
-    <div class="header-inner">
-     
-      <div class="header-inner-left">
-        <div id="mySidenav" class="sidenav header-inner-left">
-            <%if (!locals.session.loggedin) { %>
-                <% }else{ %>
-            <a href="javascript:void(0)" class="closesidenavbtn" onclick="closeNav()">&times;</a>
-            <div class="sidenav-link-div"><a href="/profile">Profile</a></div>
-            <div class="sidenav-link-div"><a href="/myrides">My rides</a></div>
-            <div class="sidenav-link-div"><a href="/create">Create ride</a></div>
-            <div class="sidenav-link-div"><a href="/find">Find ride</a></div>
-            <div class="sidenav-link-div"><a href="/contactUs">Contact Us</a></div>
-            <form class="sidenav-link-div" action="/logout?_method=DELETE" method="POST">
-                <button type="submit">Logout</button>
-            </form>
-            <%}%>
-        </div>
-        <h3 style="text-align: start;">
-            <%if (!locals.session.loggedin) { %>
-                <a id="logo-name" href="/">SplitUp</a>
-                <% }else{ %>
-                    <span id="sidenav-btn" style=" font-size:30px;cursor:pointer; align-self: flex-start;" onclick="openNav()">&#9776; </span><a id="logo-name" href="/">SplitUp</a>
-                    <%}%>
-        </h3>
-      </div>
+.header-inner{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0% 5% 0% 75px;
+}
+.header-inner-left{
+    flex: 1 1 0%;
+}
+.header-inner-centre{
+    flex: content;
+    display: flex;
+}
+#header-inner-right,#header-inner-right-a-login,#header-inner-right-b-login{
+    display: flex;
+    flex: content;
+    align-items: center;
+}
+.header-inner-right-a-login svg{
+    color: black;
+    font-size: xx-large;
+}
+.button-login{
+    
+    color: rgba(255, 81, 0, 0.774);
+    background-color: white;
+    font-weight: bolder;
+    font-size: 120%;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    margin-right: 20px;
+}
+.button-login:hover{
+    color: rgba(255, 21, 0, 0.801);
+}
+.button-login:focus{
+    color: rgba(255, 21, 0, 0.801);
+    outline: none;
+}
+.button-sign-up{
+    color: white;
+    background-color: rgba(255, 81, 0, 0.9);
+    font-weight: bolder;
+    font-size: 120%;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+}
+.button-sign-up:hover{
+    background-color: rgba(255, 21, 0, 0.801);
+}
+.button-sign-up:focus{
+    background-color: rgba(255, 21, 0, 0.801);
+    outline: none;
+    box-shadow: none;
+    transform:translate(1px,1px);
+}
 
 
-      <div class="header-inner-centre"></div>
+.logout-btn{
+    color: rgba(255, 255, 255, 0.95);
+    background-color: transparent;
+    border:  none;
+    margin-left: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+.logout-btn:hover{
+    color: rgba(255, 21, 0, 0.938);
+    text-decoration: none;
+}
 
 
-      <div id="header-inner-right-b-login">
 
-        <%if (!locals.session.loggedin) { %>
-          <div id="login&signup">
-              <a href="/login"><button type="button" class="button-login">Login</button></a>
-              <a href="/register"><button type="button" class="button-sign-up">Sign up</button></a>
-          </div> 
-          <div id="only-login"> 
-              <a href="/login"><button type="button" class="button-login">Login</button></a>
-          </div> 
-          <div id="only-signup">
-              <a href="/register"><button type="button" class="button-login"><!-- Here we want login button style --> Sign up</button></a>
-          </div>   
-        <% }else{ %>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
-            </svg></a>
-            <div class="profile-img-div">
-                <a href=""><img id="profile-img" src="/img/profile-img.jpg" alt="profile-img"></a>
-            </div>
-            <form action="/logout?_method=DELETE" method="POST">
-                <button class="logout-btn" type="submit">Logout</button>
-            </form>
-        <%}%>
-      </div>
-    </div>
-  <!--<h2>Find a Ride</h2>--> 
-  </header>
+
+
+
+
