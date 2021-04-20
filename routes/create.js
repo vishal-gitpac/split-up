@@ -26,8 +26,10 @@ router.post('/',async (req,res)=>{
         noOfPassengers: req.body.noOfPassengers,
         price: req.body.price,
         date: new Date(req.body.date),
-        time: req.body.time
+        time: req.body.time,
+        creatorId: req.user._id
     })
+    
     const newDetail = new Detail()
     newDetail.ride_id = ride.id
     newDetail.passengers.push(ride.creatorName)
