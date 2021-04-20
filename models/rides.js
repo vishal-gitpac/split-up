@@ -5,6 +5,9 @@ const rideSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    creatorId:{
+        type: mongoose.Schema.Types.ObjectId
+    },
     pickupPoint:{
         type: String,
         required: true
