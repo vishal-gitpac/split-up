@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Find Ride</title>
+    <link rel="stylesheet" href="/css/find-styles.css">
+    
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+    document.getElementById('login&signup').style.display='flex';
+    document.getElementById('only-login').style.display='none';
+    document.getElementById('only-signup').style.display='none';
+    window.onclick=function()
+    {
+        var hidedivforgot=document.getElementById('join-modal');
+        window.onclick = function(event)
+        {
+            if (event.target == hidedivforgot)
+            {
+                hidedivforgot.style.display = "none";
+            }
+        }
+    }
+
+</script>
+<body>
+    <div class="top-container">
+        <div class="page-heading">
+            <h1 style="margin: 0;">Find Ride</h1>
+        </div>
+        <div class="search-form-div">
+
+            <form id="search-form" action="/find" method="POST" autocomplete="off">
+
+                <input class="pickup-input" type="text" name="pickupPoint" placeholder="PickUp Point"  >
+                <input class="drop-input" type="text" name="dropoffPoint" placeholder="Dropoff Point"   >
+                <input class="date-input" type="date" name="date" placeholder="Date"  >
+
+                <button class="search-btn" type="submit">Search</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="show-ride-container">
+        <div id="available-rides" style="text-align: center; margin: 0 auto;">
+            <h1>Available rides</h1>
+        </div>
+        <form action="/find" method="POST">
+            <%- include('_forms.ejs') %> 
+        </form>
+    </div>
+
+  </body>
+  </html>

@@ -1,0 +1,52 @@
+
+@font-face {
+    font-family: 'quote-font';
+    src : url(fonts/SpecialElite-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'AquireBold';
+    src : url(fonts/AquireBold-8Ma60.otf)  ; 
+}
+@font-face {
+    font-family: 'Gilroy';
+    src : url(fonts/Gilroy-Light.otf)  ; 
+}
+@font-face {
+    font-family: 'Techovier';
+    src : url(../fonts/Techovier\ Black.ttf)  ; 
+}
+*{
+    font-family: 'Gilroy';
+}
+a{
+    cursor: pointer;
+}
+body{
+    
+    background-image: url('../img/myride-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: right;
+}
+.page-heading{
+    margin: auto auto;
+    text-align: center;
+    border-bottom: 2px solid black;
+    display: none;
+}
+
+.top-container{
+    margin: auto auto;
+    align-items: center;
+    padding: 150px 0 0 75px;
+}
+.top-container h2{
+    font-family: Techovier;
+    color: black;
+}
+.top-container p{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}

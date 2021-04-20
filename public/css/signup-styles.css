@@ -1,0 +1,80 @@
+
+@font-face {
+    font-family: 'quote-font';
+    src : url(../fonts/SpecialElite-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'AquireBold';
+    src : url(../fonts/AquireBold-8Ma60.otf)  ; 
+}
+@font-face {
+    font-family: 'Gilroy';
+    src : url(../fonts/Gilroy-Light.otf)  ; 
+}
+*{
+    font-family: 'Gilroy';
+}
+a{
+    cursor: pointer;
+}
+
+.top-container{
+    margin: 40px 0px 40px 0px;
+    padding-top: 80px;
+    align-items: center;
+}
+.form-div h1{
+    margin: 5% 0% 5% 0%;
+}
+.form-div{
+    margin: 0% 30% 0% 30%;
+    /*margin: 0% 5% 0% 60%;*/
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.sign-up-input{
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: start;
+    padding: 2% 10% 5% 10%;
+}
+.sign-up-input label{
+    font-size: 18px;
+}
+.sign-up-input input[type=text],.sign-up-input input[type=email],.sign-up-input input[type=number], .sign-up-input input[type=password]{
+    width: 100%;
+    height: 30px;
+    border: 2px solid rgba(24, 23, 23, 0.315);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    outline: none;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border-color: rgb(31, 31, 31);
+}
+.sign-up-confirm-btn-div{
+    padding: 2% 10% 5% 10%;
+}
+#sign-up-confirm-btn{
+    margin: 0px auto 0px auto ;
+    width: 80%;
+    padding: 9px 25px;
+    font-size: 120%;
+    color: white;
+    background-color: rgba(255, 81, 0, 0.774);
+    border-style: solid;
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+}
+#sign-up-confirm-btn:hover{
+    transition: all 0.3s ease 0s;
+    background-color: rgba(255, 60, 0, 0.774);
+}
+#sign-up-confirm-btn:focus{
+    background-color: rgba(255, 60, 0, 0.774);
+}

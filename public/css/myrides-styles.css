@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: 'quote-font';
+    src : url(fonts/SpecialElite-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'AquireBold';
+    src : url(fonts/AquireBold-8Ma60.otf)  ; 
+}
+@font-face {
+    font-family: 'Gilroy';
+    src : url(fonts/Gilroy-Light.otf)  ; 
+}
+*{
+    font-family: 'Gilroy';
+}
+a{
+    cursor: pointer;
+}
+body{
+    
+    background-image: url('../img/myrides-bg.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: left;
+}
+.page-heading{
+    margin: auto auto;
+    text-align: center;
+    border-bottom: 2px solid black;
+    display: none;
+}
+
+.top-container{
+    margin: auto auto;
+    align-items: center;
+    padding: 217px 0 0 0;
+}
+.show-ride-container{
+    margin: 25px auto;
+    align-items: center;
+}
+.show-ride-div-div{
+    margin: 20px auto;
+}
+.show-ride-div{
+    padding: 10px 5px 10px 30px     !important;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    box-shadow: 1px 1px 20px grey;
+    transition: 0.5s;
+    overflow-x: hidden;
+    width: 800px                    !important; 
+}
+.show-ride-div:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px grey;
+}
+.show-ride-div .col-md-4{
+    width: 100%;
+
+}
+.show-ride-div p,.show-ride-div h4{
+    margin: 0%;
+    font-size: 20px;
+    z-index: 0;
+}
+.show-ride-div a{
+    color: black;
+}
+.show-ride-div a:hover{
+    color: black;
+}
+
+
+
+#available-rides{
+    font-family: 'AquireBold';
+    text-align: center;
+    color: orangered;
+    text-shadow: 3px 3px 0px grey;
+}
+#available-rides h1{
+    width: fit-content;
+    margin: 0 auto;
+   
+}
+
+

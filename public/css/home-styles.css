@@ -1,0 +1,145 @@
+html{
+    font-family: sans-serif;
+}
+button{
+    outline: none;
+}
+@font-face {
+    font-family: 'quote-font';
+    src : url(../fonts/SpecialElite-Regular.ttf) ;
+}
+@font-face {
+    font-family: 'AquireBold1';
+    src : url(../fonts/AquireBold-8Ma60.otf)  ; 
+}
+@font-face {
+    font-family: 'Gilroy';
+    src : url(../fonts/Gilroy-Light.otf)  ; 
+}
+*{
+    font-family: 'Gilroy';
+}
+a{
+    cursor: pointer;
+}
+
+.logo-name{
+    font-family: 'AquireBold1';
+    font-size: xx-large;
+}
+
+
+
+
+
+
+
+
+
+.top-container{
+    /*border: 1px solid black;*/
+    
+    width: 100%;
+    /*one html page=700px header=80px*/
+    height: 695px;
+    padding-top: 80px;
+    padding-left: 75px;
+    background: linear-gradient( 270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../img/bg.jpg');
+    
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    
+    
+}
+.quote-content{
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+    width: 50%;
+    padding: 0px 0px 0px 0px;
+    height: 400px;
+    font-family: 'quote-font';
+}
+.button-ride-div{
+    justify-content: space-evenly;
+    margin: 0px 0px 30px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+.button-ride{
+    background-color: white;
+    color: rgba(255, 81, 0, 0.774);/*rgba(255, 81, 0, 0.774);*/
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px 25px 5px 5px;
+    font-family: 'Gilroy';
+    font-weight: bolder;
+    font-size: 120%;
+    /*box-shadow: 0px 0px 5px rgb(212, 212, 212) ;*/
+    
+    
+
+    outline: none;
+}
+.button-ride:hover {
+    background-color: rgba(255, 81, 0, 1);/*rgba(255, 81, 0, 0.774);*/
+    border: 1px solid rgba(255, 81, 0, 1);
+    color: white;
+}
+
+#home-button-book{
+    color: white;
+    background-color:rgb(224, 81, 14) ;
+    border: 1px solid rgba(255, 81, 0, 1) ;
+}
+
+#home-button-book:hover{
+    background-color:rgba(255, 81, 0, 1);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mid-container{
+    padding: 20px 0px 20px 0px;
+}
+.mid-container .row{
+    margin-top: 10%;
+}
+.mid-container .col-md-4{
+    margin: 0% 5% 0% 5%;
+    padding: 20px 20px 20px 20px;
+    height: 100%;
+    width: 23.33%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(109, 109, 109) ;
+}
+
+.cover-page-heading{
+    color: white;
+    font-family: 'Gilroy';
+    line-height: 150%
+}

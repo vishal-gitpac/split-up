@@ -1,0 +1,94 @@
+
+<% if (messages.error) { %>
+    <%= messages.error %>
+  <% } %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login-styles.css">
+    <link rel="stylesheet" href="/css/login-2.css">
+    
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <script>
+    document.getElementById('login&signup').style.display='none';
+    document.getElementById('only-login').style.display='none';
+    document.getElementById('only-signup').style.display='flex';
+      window.onclick=function()
+      {
+        var hidedivforgot=document.getElementById('forgot-modal');
+        window.onclick = function(event)
+        {
+          if (event.target == hidedivforgot)
+          {
+            hidedivforgot.style.display = "none";
+          }
+        }
+      }
+      
+  </script>
+  <body>
+
+    <div class="top-container">
+      <div class="form-div">
+            <h1 style="margin-top: 10%;">Login</h1>
+
+            <form id="login-form" action="/login" method="POST" autocomplete="off">
+              <div class="login-input">
+
+                <br><br>
+                <label for="email"><b>E-mail:</b></label><br>
+                <input id="email" type="email" placeholder="Registered email" name="email" required >
+
+                <br><br>
+                  <label for="password"><b>Password:</b></label><br>
+                  <input id="password" type="password" placeholder="Password" name="password" required >
+
+              </div>
+              <div class="login-confirm-btn-div">
+                  <button id="login-confirm-btn" type="submit"><b>Login</b></button>
+              </div>
+                <!--desktop version-->
+                <div style="margin: 0 auto; width: max-content;">
+                    <a class="forgot-btn" onclick="document.getElementById('forgot-modal').style.display='block'">Forgot password?
+                    </a>
+                </div>
+                <br><br>
+                <!--desktop version forgot-modal -->
+            </form>
+
+      </div>
+    </div>
+
+    <!--    forgot modal    -->
+    <div id="forgot-modal" class="modal">
+      <form class="modal-content animate" action="/login" method="get">
+
+          <br><span onclick="document.getElementById('forgot-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <div class="modal-container0 logo-name">
+              <h1>SplitUp</h1>
+          </div>
+          <div class="modal-container1">
+
+              <label for="uname"><b>Email</b></label><br>
+              <input type="text" placeholder="Enter Email" name="uname" required>
+
+          </div>
+          <div class="modal-container2">
+              <button class="modal-button" type="submit"><b>Send mail</b></button>
+          </div>
+      
+      </form>
+  </div>
+  <!--    forgot modal    -->
+
+
+  </body>
+</html>

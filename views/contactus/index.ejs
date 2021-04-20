@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/css/css-contact-form.css">
+    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+      
+    <div class="form-container">
+        <form autocomplete="off" action="/contactUs" method="POST">
+            
+            <div class="contact-form">
+                <h1 style="text-align: center;"><b>CONTACT</b></h1>
+                
+                <input type="text" name="name" id="" placeholder="Full Name"><br>
+                
+                <input type="email" name="email" id="" placeholder="Email"><br>
+                
+                <input type="text" name="subject" id="" placeholder="Subject"><br>
+    
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+    
+                <input class="submit" type="submit" value="Send Message">
+                <p class="errormessage"> <%=  errorMessage || null %>  </p> 
+            </div>
+    
+        </form>
+    </div>
+    
+  </body>
+</html>

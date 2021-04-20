@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Create Ride</title>
+    <link rel="stylesheet" href="/css/create-styles.css">
+    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <div class="top-container">
+      <div class="form-div">
+            <h1>Create Ride</h1>
+
+            <form action="/create" method="POST">
+               <%- include('_forms.ejs') %>
+                
+               <div class="create-ride-confirm-btn-div">
+                  <button id="create-ride-confirm-btn" type="submit"><b>Create</b></button>
+               </div>
+              <div class="create-ride-cancel-btn-div">
+                  <a href="/"><b>Cancel</b></a>
+                  <br>
+                  <br>
+              </div>
+            </form>
+
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!--
+
+    <h2>This page shows your rides </h2>
+
+
+        
+   <% myRide.forEach(myRide => { %>
+    <div> 
+    <p
+        ><%= myRide.creatorName%>
+        <%= myRide.pickupPoint %>
+        <%= myRide.dropoffPoint %>  
+        <%= myRide.date.toISOString().split('T')[0] %>
+        <%= myRide.price %>
+        <%= myRide.noOfPassengers %>  
+        <a href="myrides/<%= myRide.id %>">View</a>
+        <%if(myRide.status=='true'){ %>
+            <form action="myrides/<%= myRide.id %>" method="POST">
+                <button type="submit" >Cancel</button>
+            </form>
+       <% } %>
+    </p> 
+     </div>
+     
+    <% }) %> 
+-->
+        
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Find Ride</title>
+    <link rel="stylesheet" href="/css/myrides-styles.css">
+    
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+    document.getElementById('login&signup').style.display='flex';
+    document.getElementById('only-login').style.display='none';
+    document.getElementById('only-signup').style.display='none';
+    window.onclick=function()
+    {
+        var hidedivforgot=document.getElementById('join-modal');
+        window.onclick = function(event)
+        {
+            if (event.target == hidedivforgot)
+            {
+                hidedivforgot.style.display = "none";
+            }
+        }
+    }
+
+</script>
+<body>
+
+    <div class="top-container show-ride-container">
+        <div id="available-rides" style="text-align: center; margin: 0 auto;">
+            <h1>Your rides</h1>
+        </div>  
+        <% myRide.forEach(myRide => { %>
+    
+            <div class="show-ride-div-div">
+                <div class="show-ride-div container">
+                    <div style="width: 60%;" class="col-md-4">
+                        <div style="padding-bottom: 5px;" class="row">
+                            <p><b> Pickup Point:</b> <%= myRide.pickupPoint %></p>
+                        </div>
+                        <div class="row">
+                            <p><b>Dropoff Point:</b> <%= myRide.dropoffPoint %></p>
+                        </div>
+                    </div>
+                    <div style="width: 60%;" class="col-md-4">
+                        <div style="padding-bottom: 5px;" class="row">
+                            <p><b>Date:</b> <%= myRide.date.toISOString().split('T')[0] %></p>
+                        </div>
+                        <div class="row">
+                            <p><b>Price:</b> Rs. <%= myRide.price %></p>
+                        </div>
+                    </div>
+                    <div style="width: 20%; " class="col-md-4">
+                        <a style="margin: 0 auto" href="myrides/<%= myRide.id %>">View</a>
+                        <%if(myRide.status=='true'){ %>
+                            <form action="myrides/<%= myRide.id %>" method="POST">
+                                <button style="padding: 0;background-color: white; border: none;" type="submit" >Cancel</button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <% }) %> 
+            
+    </div>
+    
+
+  </body>
+  </html>
+   
+

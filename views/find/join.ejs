@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Create Ride</title>
+    <link rel="stylesheet" href="/css/find-styles.css">
+    
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <div class="ride-confirm-container">
+        <div class="ride-confirm-div">
+
+            <div style="text-align: center;">
+                <h1 class="logo-name">Ride Details</h1><br>
+            </div>
+            <div>
+                <div>
+                    <h4><b> Host </b>: <%= ride.creatorName %></h4>
+                    <h4><b> Pickup Point</b>: <%= ride.pickupPoint %>  </h4>
+                    <h4><b> Dropoff Point</b>: <%= ride.dropoffPoint %></h4>
+                    <h4><b> Date</b>: <%= ride.date.toISOString().split('T')[0] %></h4>
+                    <h4><b> Time</b>: <%= ride.time %></h4>
+                    <h4><b> Price</b>:  Rs. <%= ride.price%></h4>
+                    <h4><b> Seats availability:</b> <%= ride.noOfPassengers %></h4>
+                </div>
+                <div class="ride-confirm-btn-div">
+                    <form action="<% ride.id %>" method="POST">
+                        <button class="ride-confirm-btn" type="submit">Confirm Join</button>
+                        <a href="/find">cancel</a>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    </div>
+
+
+
+  </body>
+</html>

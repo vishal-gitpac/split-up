@@ -1,0 +1,31 @@
+<% myRide.forEach(myRide => { %> 
+<div class="show-ride-div-div">
+    <a href="/find/<%= myRide.id %>">  
+    <div class="show-ride-div container" >
+        <div  class="col-md-4">
+            <div style="padding-bottom: 5px;" class="row">
+                <p><b> Pickup Point:</b> <%= myRide.pickupPoint %></p>
+            </div>
+            <div class="row">
+                <p><b>Dropoff Point:</b> <%= myRide.dropoffPoint %></p>
+            </div>
+        </div>
+        <div  class="col-md-4">
+            <div style="padding-bottom: 5px;" class="row">
+                <p><b>Date:</b> <%= myRide.date.toISOString().split('T')[0] %></p>
+            </div>
+            <div class="row">
+                <p><b>Price:</b> Rs. <%= myRide.price %></p>
+            </div>
+        </div>
+        <div  class="col-md-4">
+            <p><b> Time:</b> <%= myRide.time %>  </p>
+            <p><b> Host:</b> <%= myRide.creatorName %>  </p>
+            
+        </div>
+    </div>
+</a>
+</div>
+
+
+<% }) %> 

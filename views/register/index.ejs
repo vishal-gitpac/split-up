@@ -1,0 +1,83 @@
+<!--
+    
+-->
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/css/signup-styles.css">
+    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+  document.getElementById('login&signup').style.display='none';
+    document.getElementById('only-login').style.display='flex';
+    document.getElementById('only-signup').style.display='none';
+</script>
+<% if (errorMessage) { %>
+    <%= errorMessage %>
+  <% } %>
+  <body style="margin: 0%;">
+
+  
+        <!--    
+    <header class="">
+      <div class="header-inner">
+          
+        <div class="header-inner-left">
+            <h3 class="logo-name" style="text-align: start;">SplitUp</h3>
+        </div>
+        <div class="header-inner-centre">
+          
+        </div>
+        <div id="header-inner-right-b-login">
+          <a href="/login"><button type="button" class="button-login">Login</button></a>
+        </div>
+        <div id="header-inner-right-a-login">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+            </svg></a>
+            <div class="profile-img-div">
+              <a href=""><img id="profile-img" src="profile-img.jpg" alt="profile-img"></a>
+            </div>
+        </div>
+      </div>
+    </header>
+        -->
+
+    <div class="top-container">
+      <div class="form-div">
+            <h1>Sign up</h1>
+
+            <form id="signup-form" action="/register" method="POST" autocomplete="off">
+              <div class="sign-up-input">
+                <label for="name"><b>Full Name:</b></label><br>
+                <input  type="text" placeholder="Full Name" name="name" required>
+
+                <br><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" placeholder="Enter Email" name="email" required>
+                <br><br>
+                <label for="mobileNo"><b>Mobile Number:</b></label><br>
+                <input type="number" placeholder="Enter Mobile Number" name="mobileNumber" required>
+
+                <br><br>
+                  <label for="password"><b>Password:</b></label><br>
+                  <input type="password" placeholder="Enter Password" name="password" required>
+
+              </div>
+              <div class="sign-up-confirm-btn-div">
+                  <button id="sign-up-confirm-btn" type="submit"><b>Create account</b></button>
+              </div>
+            </form>
+
+      </div>
+    </div>
+  </body>
+  </html>

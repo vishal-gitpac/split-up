@@ -1,0 +1,78 @@
+<!--
+   after joining aride
+
+
+
+
+<div style="padding-top: 100px;">
+   <p>
+   Creator: <%= ride.creatorName %>
+   Pickup Point: <%= ride.pickupPoint %>  
+   Dropoff Point: <%= ride.dropoffPoint %>
+   Date: <%= ride.date.toISOString().split('T')[0] %>
+   Price: <%= ride.price + 'Rs' %> 
+   Passengers: <%= detail.passengers %>
+   </p>
+</div>
+
+-->
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Find Ride</title>
+    <link rel="stylesheet" href="/css/ridedetails-styles.css">
+    
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+    document.getElementById('login&signup').style.display='flex';
+    document.getElementById('only-login').style.display='none';
+    document.getElementById('only-signup').style.display='none';
+    window.onclick=function()
+    {
+        var hidedivforgot=document.getElementById('join-modal');
+        window.onclick = function(event)
+        {
+            if (event.target == hidedivforgot)
+            {
+                hidedivforgot.style.display = "none";
+            }
+        }
+    }
+
+</script>
+<body>
+
+   <div class="top-container">
+      <h2>Ride Details:</h2><br>
+   
+      <div style="padding-left: 15px; width: 50%;">
+         <p><b> Host:</b> <%= ride.creatorName %> </p>
+         <p><b> Pickup Point:</b> <%= ride.pickupPoint %>  </p>
+         <p><b> Dropoff Point:</b> <%= ride.dropoffPoint %></p>
+         <p><b> Date:</b> <%= ride.date.toISOString().split('T')[0] %></p>
+         <p><b> Price:</b> Rs. <%= ride.price %> </p>
+         <p><b> Host's Contact:</b> <%= detail.hostNumber %></p>
+         <p><b> Passengers:</b> <%= detail.passengers %></p>
+         
+      </div>
+      
+   
+   </div>
+    
+
+  </body>
+  </html>
+   
+
