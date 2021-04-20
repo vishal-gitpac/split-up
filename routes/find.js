@@ -54,18 +54,19 @@ router.post('/',checkAuthenticated,async (req,res)=>{
     if(req.body.dropoffPoint != null && req.body.dropoffPoint !== ''){
         searchOptions.dropoffPoint = new RegExp(req.body.dropoffPoint, 'i')
     }
-    searchOptions.creatorName != req.user.userName 
+    
     if(req.body.date != null && req.body.date !== ''){
         searchOptions.date = new Date(req.body.date)
     }
     
-    
+    searchOptions.creatorId = {$ne: req.user._id}
+     
     searchOptions.status = true
     
     searchOptions.filled = false
     
     try{
-        const myRide = await Ride.find({searchOptions,creatorName: {$ne: req.user.userName }}).sort({createdAt: 'desc'})
+        const myRide = await Ride.find(searchOptions).sort({createdAt: 'desc'})
         
         res.render('find/index',{
             myRide:myRide,
