@@ -60,6 +60,7 @@ a{
     padding: 0px 0px 0px 0px;
     height: 400px;
     font-family: 'quote-font';
+    margin-top: 15vh;
 }
 .button-ride-div{
     justify-content: space-evenly;
