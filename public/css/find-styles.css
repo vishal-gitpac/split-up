@@ -23,10 +23,13 @@ a{
 }
 body{
     
-    background-image: url('../img/find-background.jpeg');
+    background-image: url('../img/find-background.svg');
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: auto;
+    background-position: center;
+    
 }
 .page-heading{
     margin: auto auto;
